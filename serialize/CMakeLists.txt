@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+
+PROJECT(serialize)
+
+SET(SOURCES 
+    serialize.c
+    main.c
+)
+
+SET(CMAKE_C_FLAGS "-Wall -Wextra")
+
+ADD_EXECUTABLE(serial "")
+TARGET_SOURCES(serial PRIVATE ${SOURCES})

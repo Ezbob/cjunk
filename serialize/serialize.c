@@ -8,10 +8,8 @@ enum { BODY_END_INDEX = 7 };
 void serialize_HeaderRecord(uint8_t *start_itr,
                             const struct HeaderRecord *record) {
   size_t i = 0;
-  pack_u8(start_itr, record->version);
-  i++;
-  pack_u8(start_itr + i, record->type);
-  i++;
+  pack_u8(start_itr + i++, record->version);
+  pack_u8(start_itr + i++, record->type);
   pack_u16(start_itr + i, record->requestId);
   i += 2;
   pack_u16(start_itr + i, record->contentLength);
